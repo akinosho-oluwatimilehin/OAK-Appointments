@@ -1,0 +1,24 @@
+{
+  "name": "oak_appointments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "build" : "npm run build --prefix frontend",
+    "preview": "npm run preview --prefix frontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akinosho-oluwatimilehin/OAK-Appointments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/akinosho-oluwatimilehin/OAK-Appointments/issues"
+  },
+  "homepage": "https://github.com/akinosho-oluwatimilehin/OAK-Appointments#readme"
+}
