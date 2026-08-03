@@ -18,7 +18,7 @@ class StylistSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Stylist
-        field = ['id', 'name', 'bio', 'location', 'travel_fee', 'rating', 'review_count', 'is_verified', 'profile_image', 'cover_image', 'styles']
+        fields = ['id', 'name', 'bio', 'location', 'travel_fee', 'rating', 'review_count', 'is_verified', 'profile_image', 'cover_image', 'styles']
 
 
 class AppointmentSerializer(serializers.ModelSerializer):

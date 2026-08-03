@@ -4,9 +4,9 @@ from.views import StylistViewSet, HairstyleCategoryViewSet, HairstyleViewSet, Ap
 
 router = DefaultRouter()
 router.register(r'stylists', StylistViewSet)
-router.register(r'Categories', HairstyleCategoryViewSet)
-router.register(r'Hairstyle', HairstyleViewSet)
-router.register(r'Appointments', AppointmentViewSet)
+router.register(r'categories', HairstyleCategoryViewSet)
+router.register(r'hairstyles', HairstyleViewSet)
+router.register(r'appointments', AppointmentViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
