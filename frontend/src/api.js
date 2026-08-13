@@ -1,28 +1,32 @@
-import axios from 'axios'
+import axios from 'axios';
 
-export const BASE_URL = 'http://127.0.0.1:8000'
+// Since Django serves React on the same origin (http://127.0.0.1:8000), 
+// we can use window.location.origin or relative paths cleanly.
+export const BASE_URL = window.location.origin;
 
-const api = axios.create({
-  baseURL: `${BASE_URL}/api/`,
+export const api = axios.create({
+  baseURL: '/api/',
   headers: {
     'Content-Type': 'application/json',
   },
-})
+});
 
+// Helper for resolving media image URLs
 export const getImageUrl = (imagePath) => {
-  if (!imagePath) return null
-  if (imagePath.startsWith('http')) return imagePath
-  return `${BASE_URL}${imagePath}`
-}
+  if (!imagePath) return null;
+  if (imagePath.startsWith('http')) return imagePath;
+  return `${BASE_URL}${imagePath}`;
+};
 
+// API Methods
 export const getStylists = async () => {
-  const response = await api.get('stylists/')
-  return response.data
-}
+  const response = await api.get('stylists/');
+  return response.data;
+};
 
 export const createAppointment = async (appointmentData) => {
-  const response = await api.post('appointments/', appointmentData)
-  return response.data
-}
+  const response = await api.post('appointments/', appointmentData);
+  return response.data;
+};
 
-export default api
+export default api;

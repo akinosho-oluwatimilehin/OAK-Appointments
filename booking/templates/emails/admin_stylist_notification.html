@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>New Booking Alert</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #1f2937; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background-color: #111827; color: #ffffff; padding: 20px; text-align: center; border-radius: 8px 8px 0 0;">
+        <h2 style="margin: 0; font-size: 18px;">🚨 New Home Service Booking Received</h2>
+    </div>
+
+    <div style="border: 1px solid #e5e7eb; border-top: none; padding: 24px; border-radius: 0 0 8px 8px; background-color: #ffffff;">
+        <p>A new appointment has been submitted on <strong>OAK Appointments</strong>.</p>
+        
+        <h3 style="color: #374151; border-bottom: 2px solid #f3f4f6; padding-bottom: 8px;">Client Details</h3>
+        <table style="width: 100%; margin-bottom: 20px; border-collapse: collapse;">
+            <tr><td style="padding: 6px 0; color: #6b7280; width: 35%;"><strong>Name:</strong></td><td>{{ client_name }}</td></tr>
+            <tr><td style="padding: 6px 0; color: #6b7280;"><strong>Phone:</strong></td><td><a href="tel:{{ client_phone }}">{{ client_phone }}</a></td></tr>
+            <tr><td style="padding: 6px 0; color: #6b7280;"><strong>Email:</strong></td><td>{{ client_email }}</td></tr>
+            <tr><td style="padding: 6px 0; color: #6b7280;"><strong>Location:</strong></td><td>{{ client_address }}</td></tr>
+        </table>
+
+        <h3 style="color: #374151; border-bottom: 2px solid #f3f4f6; padding-bottom: 8px;">Booking Summary</h3>
+        <table style="width: 100%; margin-bottom: 20px; border-collapse: collapse;">
+            <tr><td style="padding: 6px 0; color: #6b7280; width: 35%;"><strong>Hairstyle:</strong></td><td><strong>{{ hairstyle_name }}</strong></td></tr>
+            <tr><td style="padding: 6px 0; color: #6b7280;"><strong>Assigned Stylist:</strong></td><td>{{ stylist_name }}</td></tr>
+            <tr><td style="padding: 6px 0; color: #6b7280;"><strong>Date & Time:</strong></td><td>{{ appointment_date }}</td></tr>
+            <tr><td style="padding: 6px 0; color: #6b7280;"><strong>Total Value:</strong></td><td><strong>₦{{ total_price }}</strong></td></tr>
+        </table>
+
+        <p style="font-size: 13px; color: #6b7280; margin-top: 24px; text-align: center;">
+            Log into the Django Admin dashboard to review or update this appointment's status.
+        </p>
+    </div>
+</body>
+</html>

@@ -4,6 +4,7 @@ from django.db import models
 class Stylist(models.Model):
     name = models.CharField(max_length=100)
     bio = models.CharField(blank=True, max_length=255)
+    email = models.EmailField(blank=True, null=True) 
     location = models.CharField(max_length=100)
     travel_fee = models.DecimalField(max_digits=9, decimal_places=3, default=0.00)
     rating = models.DecimalField(max_digits=2, decimal_places=1, default=4.7)
